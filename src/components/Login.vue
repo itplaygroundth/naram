@@ -37,8 +37,8 @@
 </template>
 
 <script>
-import { setTimeout } from "timers";
-import api from "../backend";
+import { setTimeout } from "timers"
+import api from "../backend"
 /* eslint-disable */
 export default {
   data() {
@@ -59,7 +59,7 @@ export default {
         variant: classpoint,
         solid: true,
         autoHideDelay: 2500
-      });
+      })
     },
     login() {
       var promise1 = new Promise((resolve, reject) => {
@@ -74,21 +74,21 @@ export default {
         resolve({
           status: this.username === "Naram" && this.password === "aaa121121",
           userid: this.username
-        });
-      });
+        })
+      })
       promise1.then(value => {
         if (value.status === true) {
-          this.$session.start();
-          this.$session.set("userid", value.userid);
-          this.notify("เข้าสู่ระบบสำเร็จ", "success");
+          this.$session.start()
+          this.$session.set("userid", value.userid)
+          this.notify("เข้าสู่ระบบสำเร็จ", "success")
           this.$store.set("loggedIn", true);
           setTimeout(() => {
-            this.$router.push("Users");
+            this.$router.push("Users")
           }, 1500);
         } else {
-          this.notify("เข้าสู่ระบบผิดพลาด", "danger");
+          this.notify("เข้าสู่ระบบผิดพลาด", "danger")
         }
-      });
+      })
     }
   }
 };
