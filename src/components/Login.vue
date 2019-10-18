@@ -4,7 +4,7 @@
     <br>
     <form v-on:submit.prevent="login">
       <b-card
-        title="เข้าสู่ระบบ เซียนเก๋า"
+        title="เข้าสู่ระบบ น้าราม"
         class="bg-dark text-white p-3"
       >
         <b-card-text>
@@ -72,7 +72,7 @@ export default {
         //     resolve(response.data);
         //   });
         resolve({
-          status: this.username === "admin" && this.password === "admin",
+          status: this.username === "Naram" && this.password === "aaa121121",
           userid: this.username
         });
       });
