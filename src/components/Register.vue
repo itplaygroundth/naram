@@ -87,7 +87,7 @@ export default {
         // console.log(8-this.userId.length)
         if(8-this.userId.length<2){
             var data = this.userId.toString();
-            var datas = data.substring(0, 4);
+            var datas = data.substring(0, 2);
             var datax = datas.toUpperCase();
             var user = this.alluser;
             var find = user.indexOf(datax);
@@ -102,6 +102,20 @@ export default {
         if(8-this.userId.length===4){
             var data = this.userId.toString();
             var datas = data.substring(0, 4);
+            var datax = datas.toUpperCase();
+            var user = this.alluser;
+            var find = user.indexOf(datas);
+            if(find != -1){
+                this.submit = true;
+                return true;
+            }else{
+                this.submit = false;
+                return false;
+            }
+        }else
+         if(8-this.userId.length>2){
+            var data = this.userId.toString();
+            var datas = data.substring(0, 2);
             var datax = datas.toUpperCase();
             var user = this.alluser;
             var find = user.indexOf(datas);
